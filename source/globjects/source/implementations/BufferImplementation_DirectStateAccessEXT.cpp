@@ -33,7 +33,7 @@ void * BufferImplementation_DirectStateAccessEXT::map(const Buffer * buffer, GLe
 
 void * BufferImplementation_DirectStateAccessEXT::mapRange(const Buffer * buffer, GLintptr offset, GLsizeiptr length, BufferAccessMask access) const
 {
-    return glMapNamedBufferRangeEXT(buffer->id(), offset, length, access);
+    return glMapNamedBufferRangeEXT(buffer->id(), offset, length, static_cast<MapBufferAccessMask>(access));
 }
 
 bool BufferImplementation_DirectStateAccessEXT::unmap(const Buffer * buffer) const

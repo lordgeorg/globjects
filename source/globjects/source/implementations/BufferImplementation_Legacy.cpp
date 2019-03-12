@@ -43,7 +43,7 @@ void * BufferImplementation_Legacy::mapRange(const Buffer * buffer, GLintptr off
 {
     buffer->bind(s_workingTarget);
 
-    return glMapBufferRange(s_workingTarget, offset, length, access);
+    return glMapBufferRange(s_workingTarget, offset, length, static_cast<MapBufferAccessMask>(access));
 }
 
 bool BufferImplementation_Legacy::unmap(const Buffer * buffer) const

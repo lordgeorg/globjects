@@ -141,7 +141,7 @@ LogMessageBuilder operator<<(LogMessageBuilder builder, const gl::FragmentShader
     return builder;
 }
 
-LogMessageBuilder operator<<(LogMessageBuilder builder, const gl::MapBufferUsageMask & value)
+LogMessageBuilder operator<<(LogMessageBuilder builder, const gl::MapBufferAccessMask & value)
 {
     std::ostringstream stream;
 
